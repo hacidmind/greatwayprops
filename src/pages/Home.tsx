@@ -16,22 +16,22 @@ const Hero = () => {
         <div className="absolute inset-0 bg-primary/30"></div>
       </div>
       
-      <div className="relative z-10 container mx-auto px-8 lg:px-12">
+      <div className="relative z-10 container mx-auto px-6 md:px-8 lg:px-12">
         <motion.div 
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="max-w-3xl"
         >
-          <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 leading-[1.1]">
+          <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold text-white mb-6 leading-[1.1]">
             Refining the Art <br /> of <span className="noto-serif-italic font-normal">Modern Living.</span>
           </h1>
-          <p className="text-xl text-white/90 max-w-xl mb-12 font-light leading-relaxed">
+          <p className="text-lg sm:text-xl text-white/90 max-w-xl mb-12 font-light leading-relaxed">
             A curated portfolio of architectural masterpieces and luxury estates, tailored for the discerning collector.
           </p>
           
-          <div className="bg-surface-lowest/90 backdrop-blur-xl p-8 rounded-2xl shadow-2xl max-w-4xl">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 items-end">
+          <div className="bg-surface-lowest/90 backdrop-blur-xl p-6 sm:p-8 rounded-2xl shadow-2xl max-w-4xl">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 items-end">
               <div className="space-y-2">
                 <label className="block text-xs uppercase tracking-widest font-semibold text-secondary">Location</label>
                 <div className="relative">
@@ -103,24 +103,24 @@ const FeaturedProperties = () => {
   ];
 
   return (
-    <section className="py-32 bg-surface-low">
-      <div className="container mx-auto px-8 lg:px-12">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
+    <section className="py-20 md:py-32 bg-surface-low">
+      <div className="container mx-auto px-6 md:px-8 lg:px-12">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 md:mb-16 gap-8">
           <div>
             <span className="text-secondary font-semibold uppercase tracking-[0.25em] text-xs mb-4 block">Curated Selection</span>
-            <h2 className="text-5xl font-bold text-primary">Signature Estates</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-primary">Signature Estates</h2>
           </div>
           <div className="flex gap-4">
-            <button className="p-4 rounded-full border border-outline-variant hover:bg-white text-primary transition-all active:scale-95">
-              <ArrowLeft size={24} />
+            <button className="p-3 md:p-4 rounded-full border border-outline-variant hover:bg-white text-primary transition-all active:scale-95">
+              <ArrowLeft size={20} className="md:w-6 md:h-6" />
             </button>
-            <button className="p-4 rounded-full bg-primary text-white hover:bg-primary-container transition-all active:scale-95 shadow-lg">
-              <ArrowRight size={24} />
+            <button className="p-3 md:p-4 rounded-full bg-primary text-white hover:bg-primary-container transition-all active:scale-95 shadow-lg">
+              <ArrowRight size={20} className="md:w-6 md:h-6" />
             </button>
           </div>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
           {properties.map((prop, idx) => (
             <PropertyCard 
               key={idx} 
@@ -135,8 +135,8 @@ const FeaturedProperties = () => {
 
 const About = () => {
   return (
-    <section className="py-32 bg-surface">
-      <div className="container mx-auto px-8 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+    <section className="py-20 md:py-32 bg-surface">
+      <div className="container mx-auto px-6 md:px-8 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24 items-center">
         <div className="relative">
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
@@ -156,23 +156,23 @@ const About = () => {
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
-            className="absolute -bottom-12 -right-12 w-72 bg-tertiary rounded-2xl p-10 flex flex-col justify-end shadow-2xl hidden md:flex"
+            className="absolute -bottom-8 -right-8 md:-bottom-12 md:-right-12 w-56 md:w-72 bg-tertiary rounded-2xl p-6 md:p-10 flex flex-col justify-end shadow-2xl hidden sm:flex"
           >
-            <span className="text-5xl font-bold font-headline text-primary mb-3">25+</span>
-            <p className="text-primary/80 font-medium leading-snug">Years of uncompromised excellence in real estate.</p>
+            <span className="text-4xl md:text-5xl font-bold font-headline text-primary mb-2 md:mb-3">25+</span>
+            <p className="text-sm md:text-base text-primary/80 font-medium leading-snug">Years of uncompromised excellence in real estate.</p>
           </motion.div>
         </div>
         
-        <div className="space-y-10">
+        <div className="space-y-8 md:space-y-10">
           <div className="space-y-4">
             <span className="text-secondary font-semibold uppercase tracking-[0.25em] text-xs">Our Philosophy</span>
-            <h2 className="text-6xl font-bold text-primary leading-[1.1]">The Greatway <br /> Difference</h2>
-            <p className="text-on-surface-variant text-lg leading-relaxed max-w-xl">
+            <h2 className="text-4xl md:text-6xl font-bold text-primary leading-[1.1]">The Greatway <br /> Difference</h2>
+            <p className="text-on-surface-variant text-base md:text-lg leading-relaxed max-w-xl">
               We believe property is more than just square footage—it's the canvas for your life. We combine data-driven insights with a curator's eye for quality.
             </p>
           </div>
           
-          <div className="space-y-8 pt-4">
+          <div className="space-y-6 md:space-y-8 pt-4">
             {[
               { icon: ShieldCheck, title: "Elite Privacy", desc: "Confidential off-market transactions for high-profile clients." },
               { icon: Landmark, title: "Curated Portfolio", desc: "Only properties that meet our stringent 120-point architectural standard." },
@@ -184,14 +184,14 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="flex gap-6"
+                className="flex gap-4 md:gap-6"
               >
-                <div className="w-14 h-14 rounded-full bg-primary/5 flex items-center justify-center flex-shrink-0 text-primary">
-                  <item.icon size={28} strokeWidth={1.5} />
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-primary/5 flex items-center justify-center flex-shrink-0 text-primary">
+                  <item.icon size={24} className="md:w-7 md:h-7" strokeWidth={1.5} />
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-primary mb-1.5">{item.title}</h4>
-                  <p className="text-on-surface-variant leading-relaxed">{item.desc}</p>
+                  <h4 className="text-lg md:text-xl font-bold text-primary mb-1">{item.title}</h4>
+                  <p className="text-sm md:text-base text-on-surface-variant leading-relaxed">{item.desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -228,23 +228,23 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-32 bg-surface-high relative overflow-hidden">
-      <div className="container mx-auto px-8 lg:px-12 relative z-10">
-        <h2 className="text-5xl font-bold text-primary mb-20 text-center">Words from the Collection</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+    <section className="py-20 md:py-32 bg-surface-high relative overflow-hidden">
+      <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-12 md:mb-20 text-center">Words from the Collection</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
           {testimonials.map((t, idx) => (
-            <div key={idx} className="bg-white p-12 rounded-2xl shadow-sm border border-outline-variant/10 flex flex-col h-full">
-              <div className="flex gap-1 text-tertiary mb-8">
+            <div key={idx} className="bg-white p-8 sm:p-12 rounded-2xl shadow-sm border border-outline-variant/10 flex flex-col h-full">
+              <div className="flex gap-1 text-tertiary mb-6 md:mb-8">
                 {[...Array(t.stars)].map((_, i) => <Star key={i} size={18} fill="currentColor" />)}
               </div>
-              <p className="text-on-surface-variant italic mb-10 leading-relaxed text-lg flex-grow">"{t.quote}"</p>
-              <div className="flex items-center gap-5 pt-6 border-t border-outline-variant/10">
-                <div className="w-14 h-14 rounded-full overflow-hidden shadow-inner">
+              <p className="text-on-surface-variant italic mb-8 md:mb-10 leading-relaxed text-base md:text-lg flex-grow">"{t.quote}"</p>
+              <div className="flex items-center gap-4 md:gap-5 pt-6 border-t border-outline-variant/10">
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full overflow-hidden shadow-inner">
                   <img src={t.image} alt={t.author} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
                 <div>
-                  <p className="font-bold text-primary text-lg">{t.author}</p>
-                  <p className="text-xs uppercase tracking-widest text-secondary font-semibold">{t.role}</p>
+                  <p className="font-bold text-primary text-base md:text-lg">{t.author}</p>
+                  <p className="text-[10px] md:text-xs uppercase tracking-widest text-secondary font-semibold">{t.role}</p>
                 </div>
               </div>
             </div>
@@ -257,9 +257,9 @@ const Testimonials = () => {
 
 const CTA = () => {
   return (
-    <section className="py-32">
-      <div className="container mx-auto px-8 lg:px-12">
-        <div className="relative rounded-[2.5rem] overflow-hidden bg-primary p-16 lg:p-32 flex flex-col items-center text-center">
+    <section className="py-20 md:py-32">
+      <div className="container mx-auto px-6 md:px-8 lg:px-12">
+        <div className="relative rounded-[2rem] md:rounded-[2.5rem] overflow-hidden bg-primary p-10 sm:p-16 lg:p-32 flex flex-col items-center text-center">
           <div className="absolute inset-0 opacity-25">
             <img 
               src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?q=80&w=2070&auto=format&fit=crop" 
@@ -269,15 +269,15 @@ const CTA = () => {
             />
           </div>
           <div className="relative z-10 max-w-2xl">
-            <h2 className="text-5xl md:text-6xl font-bold text-white mb-8 leading-tight">
+            <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold text-white mb-6 md:mb-8 leading-tight">
               Ready to step into your <br /><span className="noto-serif-italic font-normal">future estate?</span>
             </h2>
-            <p className="text-white/80 text-xl mb-12 font-light">Schedule a private, guided inspection with one of our senior property curators today.</p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <button className="bg-tertiary text-primary px-12 py-5 rounded-full font-bold text-lg hover:opacity-90 transition-all shadow-xl active:scale-95">
+            <p className="text-white/80 text-lg md:text-xl mb-8 md:mb-12 font-light">Schedule a private, guided inspection with one of our senior property curators today.</p>
+            <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center w-full sm:w-auto">
+              <button className="bg-tertiary text-primary px-8 md:px-12 py-4 md:py-5 rounded-full font-bold text-base md:text-lg hover:opacity-90 transition-all shadow-xl active:scale-95 w-full sm:w-auto">
                 Book Private Viewing
               </button>
-              <button className="border border-white/30 text-white px-12 py-5 rounded-full font-bold text-lg hover:bg-white/10 transition-all active:scale-95">
+              <button className="border border-white/30 text-white px-8 md:px-12 py-4 md:py-5 rounded-full font-bold text-base md:text-lg hover:bg-white/10 transition-all active:scale-95 w-full sm:w-auto">
                 Download Brochure
               </button>
             </div>

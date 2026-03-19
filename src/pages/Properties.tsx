@@ -72,12 +72,12 @@ export const Properties = () => {
   return (
     <div className="bg-surface-low min-h-screen pb-32">
       {/* Header */}
-      <section className="bg-primary pt-32 pb-24 text-center">
-        <div className="container mx-auto px-8 lg:px-12">
+      <section className="bg-primary pt-24 pb-16 md:pt-32 md:pb-24 text-center">
+        <div className="container mx-auto px-6 md:px-8 lg:px-12">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-7xl font-bold text-white mb-6"
+            className="text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-6"
           >
             The Collection
           </motion.h1>
@@ -85,7 +85,7 @@ export const Properties = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-white/70 text-xl max-w-2xl mx-auto font-light"
+            className="text-white/70 text-lg md:text-xl max-w-2xl mx-auto font-light"
           >
             Explore our curated portfolio of Nigeria's most prestigious architectural masterpieces.
           </motion.p>
@@ -93,8 +93,8 @@ export const Properties = () => {
       </section>
 
       {/* Filters */}
-      <div className="container mx-auto px-8 lg:px-12 -mt-12 relative z-10">
-        <div className="bg-white p-6 rounded-2xl shadow-xl flex flex-col md:flex-row gap-6 items-center">
+      <div className="container mx-auto px-6 md:px-8 lg:px-12 -mt-10 md:-mt-12 relative z-10">
+        <div className="bg-white p-4 sm:p-6 rounded-2xl shadow-xl flex flex-col md:flex-row gap-4 md:gap-6 items-center">
           <div className="relative flex-grow w-full">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-secondary" size={20} />
             <input 
@@ -102,15 +102,15 @@ export const Properties = () => {
               placeholder="Search by name or location..." 
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-12 pr-4 py-4 bg-surface-low rounded-xl border-0 focus:ring-2 focus:ring-primary/20 transition-all font-medium"
+              className="w-full pl-12 pr-4 py-3 md:py-4 bg-surface-low rounded-xl border-0 focus:ring-2 focus:ring-primary/20 transition-all font-medium text-sm md:text-base"
             />
           </div>
-          <div className="flex gap-4 w-full md:w-auto">
-            <button className="flex items-center gap-2 px-6 py-4 bg-surface-low rounded-xl text-primary font-bold hover:bg-surface-high transition-all flex-grow justify-center">
+          <div className="flex gap-3 sm:gap-4 w-full md:w-auto">
+            <button className="flex items-center gap-2 px-4 md:px-6 py-3 md:py-4 bg-surface-low rounded-xl text-primary font-bold hover:bg-surface-high transition-all flex-grow justify-center text-sm md:text-base">
               <Filter size={18} />
               <span>Filter</span>
             </button>
-            <button className="flex items-center gap-2 px-6 py-4 bg-primary text-white rounded-xl font-bold hover:opacity-90 transition-all flex-grow justify-center">
+            <button className="flex items-center gap-2 px-4 md:px-6 py-3 md:py-4 bg-primary text-white rounded-xl font-bold hover:opacity-90 transition-all flex-grow justify-center text-sm md:text-base">
               <SlidersHorizontal size={18} />
               <span>Sort</span>
             </button>
@@ -119,13 +119,13 @@ export const Properties = () => {
       </div>
 
       {/* Grid */}
-      <section className="pt-20">
-        <div className="container mx-auto px-8 lg:px-12">
-          <div className="flex justify-between items-center mb-12">
-            <p className="text-on-surface-variant font-medium">Showing {filteredProperties.length} properties</p>
+      <section className="pt-12 md:pt-20">
+        <div className="container mx-auto px-6 md:px-8 lg:px-12">
+          <div className="flex justify-between items-center mb-8 md:mb-12">
+            <p className="text-on-surface-variant font-medium text-sm md:text-base">Showing {filteredProperties.length} properties</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-12">
             {filteredProperties.map((prop, idx) => (
               <PropertyCard key={idx} {...prop} />
             ))}

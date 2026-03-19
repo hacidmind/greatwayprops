@@ -16,12 +16,12 @@ const galleryImages = [
 export const Gallery = () => {
   return (
     <div className="bg-surface-low min-h-screen pb-32">
-      <section className="bg-primary pt-32 pb-24 text-center">
-        <div className="container mx-auto px-8 lg:px-12">
+      <section className="bg-primary pt-24 pb-16 md:pt-32 md:pb-24 text-center">
+        <div className="container mx-auto px-6 md:px-8 lg:px-12">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-7xl font-bold text-white mb-6"
+            className="text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-6"
           >
             Visual Gallery
           </motion.h1>
@@ -29,16 +29,16 @@ export const Gallery = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-white/70 text-xl max-w-2xl mx-auto font-light"
+            className="text-white/70 text-lg md:text-xl max-w-2xl mx-auto font-light"
           >
             A visual journey through our most exclusive architectural masterpieces and interior designs.
           </motion.p>
         </div>
       </section>
 
-      <section className="pt-20">
-        <div className="container mx-auto px-8 lg:px-12">
-          <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
+      <section className="pt-12 md:pt-20">
+        <div className="container mx-auto px-6 md:px-8 lg:px-12">
+          <div className="columns-1 md:columns-2 lg:columns-3 gap-4 space-y-4 sm:gap-8 sm:space-y-8">
             {galleryImages.map((img, idx) => (
               <motion.div 
                 key={idx}
