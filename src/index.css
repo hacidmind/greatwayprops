@@ -1,0 +1,34 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Work+Sans:wght@300;400;500;600&display=swap');
+
+@theme {
+  --font-headline: "Noto Serif", serif;
+  --font-body: "Work Sans", sans-serif;
+
+  --color-primary: #000d22;
+  --color-primary-container: #002349;
+  --color-secondary: #4e6073;
+  --color-tertiary: #ffdea5;
+  --color-surface: #f8f9fa;
+  --color-surface-low: #f3f4f5;
+  --color-surface-high: #e7e8e9;
+  --color-surface-lowest: #ffffff;
+  --color-on-surface: #191c1d;
+  --color-on-surface-variant: #43474e;
+  --color-outline-variant: #c4c6cf;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-body antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline;
+  }
+}
+
+.noto-serif-italic {
+  font-family: 'Noto Serif', serif;
+  font-style: italic;
+}
